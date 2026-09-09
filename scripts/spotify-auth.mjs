@@ -54,6 +54,24 @@ async function exchange(code) {
   return res.json();
 }
 
+
+// Escribe un secret del repo pasando el valor por stdin, para que no aparezca
+// en `ps` ni en el historial.
+function setSecret(name, value) {
+  return new Promise((resolve, reject) => {
+    const gh = spawn(
+      "gh",
+      ["secret", "set", name, "--repo", "icortesb/icortesb"],
+      { stdio: ["pipe", "inherit", "inherit"] },
+    );
+    gh.on("error", reject);
+    gh.on("close", (code) =>
+      code === 0 ? resolve() : reject(new Error(`gh secret set ${name} → ${code}`)),
+    );
+    gh.stdin.end(value);
+  });
+}
+
 const server = createServer(async (req, res) => {
   const url = new URL(req.url, `http://127.0.0.1:${PORT}`);
   if (url.pathname !== "/callback") {
@@ -76,12 +94,17 @@ const server = createServer(async (req, res) => {
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end("<h2>Listo. Volvé a la terminal.</h2>");
 
-    console.log("\n✓ Refresh token:\n");
-    console.log(tokens.refresh_token);
-    console.log("\nCargalo como secret del repo:\n");
-    console.log(`  gh secret set SPOTIFY_CLIENT_ID     --body '${id}'`);
-    console.log(`  gh secret set SPOTIFY_CLIENT_SECRET --body '${secret}'`);
-    console.log(`  gh secret set SPOTIFY_REFRESH_TOKEN --body '${tokens.refresh_token}'\n`);
+    // El refresh token va derecho a los secrets del repo por stdin: nunca se
+    // imprime ni queda en el historial de la shell.
+    for (const [name, value] of [
+      ["SPOTIFY_CLIENT_ID", id],
+      ["SPOTIFY_CLIENT_SECRET", secret],
+      ["SPOTIFY_REFRESH_TOKEN", tokens.refresh_token],
+    ]) {
+      await setSecret(name, value);
+      console.log(`  ✓ ${name} cargado`);
+    }
+    console.log("\nListo. Los tres secrets están en icortesb/icortesb.");
   } catch (e) {
     res.writeHead(500).end(String(e.message));
     console.error(`\n✗ ${e.message}`);
