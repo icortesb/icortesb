@@ -36,6 +36,18 @@ query($login: String!, $after: String) {
     repositoriesContributedTo(
       contributionTypes: [COMMIT, ISSUE, PULL_REQUEST, REPOSITORY]
     ) { totalCount }
+    contributed: repositoriesContributedTo(
+      first: 100
+      contributionTypes: [COMMIT, PULL_REQUEST, REPOSITORY]
+      includeUserRepositories: false
+    ) {
+      nodes {
+        isFork
+        languages(first: 12, orderBy: { field: SIZE, direction: DESC }) {
+          edges { size node { name color } }
+        }
+      }
+    }
     repositories(
       first: 100
       after: $after
@@ -90,8 +102,14 @@ export async function fetchStats(login) {
   const yearCommits = c.totalCommitContributions + c.restrictedContributionsCount;
   const searched = await allTimeCommits(login);
 
+  // Los lenguajes salen de todo lo que efectivamente tocó: los repos propios
+  // más aquellos donde contribuyó sin ser dueño. Sin esto el laburo en la
+  // organización —que es la mayor parte del PHP— quedaba invisible. Los forks
+  // se descartan: el lenguaje es de quien lo escribió, no de quien clonó.
   const languages = new Map();
-  for (const repo of repos) {
+  const counted = [...repos, ...user.contributed.nodes.filter((r) => !r.isFork)];
+
+  for (const repo of counted) {
     for (const { size, node } of repo.languages.edges) {
       const prev = languages.get(node.name);
       languages.set(node.name, {
@@ -110,6 +128,7 @@ export async function fetchStats(login) {
     prs: user.pullRequests.totalCount,
     issues: user.issues.totalCount,
     contributedTo: user.repositoriesContributedTo.totalCount,
+    // Solo repos propios: las estrellas de un repo ajeno no son tuyas.
     stars: repos.reduce((n, r) => n + r.stargazerCount, 0),
     languages: [...languages.values()].sort((a, b) => b.size - a.size),
   };
