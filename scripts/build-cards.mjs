@@ -37,7 +37,7 @@ if (!spotifyConfigured()) {
   try {
     const [tracks, profile] = await Promise.all([
       recentlyPlayed(5),
-      fetchProfile(process.env.SPOTIFY_USER_ID || "11155934945"),
+      fetchProfile(),
     ]);
     if (tracks.length === 0) {
       console.log("  sin reproducciones recientes, se omite la card");

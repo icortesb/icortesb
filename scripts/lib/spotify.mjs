@@ -5,7 +5,6 @@
 const TOKEN_URL = "https://accounts.spotify.com/api/token";
 const RECENT_URL =
   "https://api.spotify.com/v1/me/player/recently-played?limit=";
-const USER_URL = "https://api.spotify.com/v1/users/";
 
 export function spotifyConfigured() {
   return Boolean(
@@ -77,22 +76,27 @@ async function withArt(track) {
   }
 }
 
-// El header del card lleva avatar y nombre. El perfil publico alcanza, asi que
-// no hace falta pedir scopes de cuenta ademas del de reproducciones.
-export async function fetchProfile(userId) {
+// El header lleva avatar y nombre. /v1/me es la cuenta que autorizo, asi que
+// no hay que adivinar el user id; display_name e images son campos publicos
+// y no piden scopes ademas del de reproducciones.
+export async function fetchProfile() {
   try {
     const token = await accessToken();
-    const res = await fetch(USER_URL + encodeURIComponent(userId), {
+    const res = await fetch("https://api.spotify.com/v1/me", {
       headers: { Authorization: `Bearer ${token}` },
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      console.error(`  perfil: ${res.status} ${await res.text()}`);
+      return null;
+    }
     const user = await res.json();
     const url = user.images?.at(-1)?.url ?? null;
     return {
       name: user.display_name || null,
       avatar: url ? await dataUri(url) : null,
     };
-  } catch {
+  } catch (err) {
+    console.error(`  perfil: ${err.message}`);
     return null;
   }
 }
