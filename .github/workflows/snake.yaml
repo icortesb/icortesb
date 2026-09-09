@@ -38,5 +38,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: output
+          # Sin esto el deploy borra todo lo que no venga en dist/ — es decir,
+          # las cards del perfil, que se publican en la misma rama.
+          keep_files: true
           # Optionally, you can set a custom commit message
           commit_message: "Update snake animation [skip ci]"

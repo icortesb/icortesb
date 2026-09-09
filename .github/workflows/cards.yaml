@@ -1,0 +1,52 @@
+name: Profile Cards
+
+on:
+  schedule:
+    # Cada dos horas: "recently played" se mantiene fresco sin llenar la rama
+    # output de commits. GitHub cachea las imágenes ~5 min de todos modos.
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/cards.yaml"
+
+# Dos corridas simultáneas publicarían sobre la misma rama y una pisaría a la
+# otra. Se encolan.
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Generar las cards
+        run: node scripts/build-cards.mjs
+        env:
+          # CARDS_TOKEN es un PAT con read:user + repo, para que los repos
+          # privados cuenten. Sin él cae al token de la corrida, que solo ve
+          # lo público.
+          CARDS_TOKEN: ${{ secrets.CARDS_TOKEN || secrets.GITHUB_TOKEN }}
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+
+      - name: Publicar en la rama output
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: output
+          # Sin esto el deploy borra todo lo que no venga en dist/ — es decir,
+          # los SVG del snake, que se publican en la misma rama.
+          keep_files: true
+          commit_message: "Update profile cards [skip ci]"
