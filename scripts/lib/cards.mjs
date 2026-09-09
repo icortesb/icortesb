@@ -106,28 +106,3 @@ ${bar}
 ${legend}`,
   });
 }
-
-export function spotifyCard(tracks) {
-  const rowH = 26;
-
-  // Un solo <text> con dos <tspan>: el artista fluye después del track en vez
-  // de posicionarse por separado, que es lo que hacía que se pisaran.
-  const rows = tracks
-    .map((t, i) => {
-      const y = 62 + i * rowH;
-      return `  <g transform="translate(25 ${y})">
-    <rect x="0" y="-10" width="3" height="13" rx="1.5" fill="${theme.green}"/>
-    <text x="15" y="0" font-family="${FONT}" font-size="12.5">
-      <tspan fill="${theme.text}">${esc(clip(t.name, 32))}</tspan><tspan fill="${theme.muted}">\u00a0·\u00a0${esc(clip(t.artist, 24))}</tspan>
-    </text>
-  </g>`;
-    })
-    .join("\n");
-
-  return card({
-    width: 400,
-    height: 62 + tracks.length * rowH + 12,
-    title: "Recently played",
-    body: rows,
-  });
-}

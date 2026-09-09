@@ -1,7 +1,12 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { fetchStats, rank } from "./lib/github.mjs";
-import { statsCard, langsCard, spotifyCard } from "./lib/cards.mjs";
-import { spotifyConfigured, recentlyPlayed } from "./lib/spotify.mjs";
+import { statsCard, langsCard } from "./lib/cards.mjs";
+import { spotifyCard } from "./lib/spotify-card.mjs";
+import {
+  spotifyConfigured,
+  recentlyPlayed,
+  fetchProfile,
+} from "./lib/spotify.mjs";
 
 const LOGIN = process.env.CARDS_LOGIN || "icortesb";
 const OUT = new URL("../dist/", import.meta.url);
@@ -30,11 +35,15 @@ if (!spotifyConfigured()) {
 } else {
   console.log("Spotify:");
   try {
-    const tracks = await recentlyPlayed(5);
+    const [tracks, profile] = await Promise.all([
+      recentlyPlayed(5),
+      fetchProfile(process.env.SPOTIFY_USER_ID || "11155934945"),
+    ]);
     if (tracks.length === 0) {
       console.log("  sin reproducciones recientes, se omite la card");
     } else {
-      await write("spotify.svg", spotifyCard(tracks));
+      console.log(`  ${tracks.length} tracks · perfil: ${profile?.name ?? "n/d"}`);
+      await write("spotify.svg", spotifyCard(tracks, profile));
     }
   } catch (err) {
     console.error(`  ✗ ${err.message}`);
