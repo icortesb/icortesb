@@ -118,7 +118,7 @@ export function spotifyCard(tracks) {
       return `  <g transform="translate(25 ${y})">
     <rect x="0" y="-10" width="3" height="13" rx="1.5" fill="${theme.green}"/>
     <text x="15" y="0" font-family="${FONT}" font-size="12.5">
-      <tspan fill="${theme.text}">${esc(clip(t.name, 32))}</tspan><tspan fill="${theme.muted}"> · ${esc(clip(t.artist, 24))}</tspan>
+      <tspan fill="${theme.text}">${esc(clip(t.name, 32))}</tspan><tspan fill="${theme.muted}">\u00a0·\u00a0${esc(clip(t.artist, 24))}</tspan>
     </text>
   </g>`;
     })
