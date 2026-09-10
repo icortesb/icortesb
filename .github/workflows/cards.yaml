@@ -44,7 +44,7 @@ jobs:
       # La card de Spotify la genera vinilo, que publica a la misma rama
       # preservando lo que ya está ahí.
       - name: Card de Spotify
-        uses: icortesb/vinilo@main
+        uses: icortesb/vinilo@v1
         with:
           client-id: ${{ secrets.SPOTIFY_CLIENT_ID }}
           client-secret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
