@@ -14,6 +14,10 @@ on:
 
 # Dos corridas simultáneas publicarían sobre la misma rama y una pisaría a la
 # otra. Se encolan.
+# vinilo commitea la card a la rama output.
+permissions:
+  contents: write
+
 concurrency:
   group: profile-cards
   cancel-in-progress: false
@@ -36,9 +40,17 @@ jobs:
           # privados cuenten. Sin él cae al token de la corrida, que solo ve
           # lo público.
           CARDS_TOKEN: ${{ secrets.CARDS_TOKEN || secrets.GITHUB_TOKEN }}
-          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+
+      # La card de Spotify la genera vinilo, que publica a la misma rama
+      # preservando lo que ya está ahí.
+      - name: Card de Spotify
+        uses: icortesb/vinilo@main
+        with:
+          client-id: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          client-secret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          lang: es
+          publish-to: output
 
       - name: Publicar en la rama output
         uses: peaceiris/actions-gh-pages@v4

@@ -84,7 +84,10 @@
 ###
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/icortesb/icortesb/output/spotify.svg" alt="Recently played on Spotify" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/icortesb/icortesb/output/vinilo-dark.svg" />
+    <img src="https://raw.githubusercontent.com/icortesb/icortesb/output/vinilo.svg" alt="Recently played on Spotify" width="400" />
+  </picture>
 </div>
 
 ###
