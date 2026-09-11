@@ -5,12 +5,12 @@
   <g transform="translate(0 62)">
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
-    <rect x="25.00" y="0" width="158.33" height="8" fill="#4F5D95"/>
-    <rect x="183.33" y="0" width="57.57" height="8" fill="#f1e05a"/>
-    <rect x="240.90" y="0" width="26.14" height="8" fill="#663399"/>
-    <rect x="267.04" y="0" width="20.46" height="8" fill="#ff5a03"/>
-    <rect x="287.50" y="0" width="16.43" height="8" fill="#3178c6"/>
-    <rect x="303.92" y="0" width="11.08" height="8" fill="#00ADD8"/>
+    <rect x="25.00" y="0" width="158.30" height="8" fill="#4F5D95"/>
+    <rect x="183.30" y="0" width="57.54" height="8" fill="#f1e05a"/>
+    <rect x="240.84" y="0" width="26.12" height="8" fill="#663399"/>
+    <rect x="266.97" y="0" width="20.54" height="8" fill="#ff5a03"/>
+    <rect x="287.51" y="0" width="16.42" height="8" fill="#3178c6"/>
+    <rect x="303.93" y="0" width="11.07" height="8" fill="#00ADD8"/>
     </g>
   </g>
   <g transform="translate(25.00 98)">
@@ -19,7 +19,7 @@
   </g>
   <g transform="translate(170.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">JavaScript 19.9%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">JavaScript 19.8%</text>
   </g>
   <g transform="translate(25.00 128)">
     <circle cx="5" cy="-4" r="5" fill="#663399"/>
