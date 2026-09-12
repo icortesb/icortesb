@@ -10,7 +10,7 @@
   <g transform="translate(25 87)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/></svg>
     <text x="27" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" fill="#d8dee9">Total Commits:</text>
-    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">4,249</text>
+    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">4,272</text>
   </g>
   <g transform="translate(25 112)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"/></svg>
@@ -20,12 +20,12 @@
   <g transform="translate(25 137)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/></svg>
     <text x="27" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" fill="#d8dee9">Total Issues:</text>
-    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">0</text>
+    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">1</text>
   </g>
   <g transform="translate(25 162)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8z"/></svg>
     <text x="27" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" fill="#d8dee9">Contributed to:</text>
-    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">25</text>
+    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">26</text>
   </g>
   <g transform="translate(25 187)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.508 5.508 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5z"/></svg>
@@ -37,7 +37,7 @@
     <circle r="40" fill="none" stroke="#88c0d0" stroke-width="6"
       stroke-linecap="round" transform="rotate(-90)"
       stroke-dasharray="251.33"
-      stroke-dashoffset="122.70"/>
+      stroke-dashoffset="122.08"/>
     <text y="7" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="24" font-weight="700" fill="#88c0d0">B+</text>
   </g>
 </svg>
