@@ -1,0 +1,36 @@
+name: Spotify Card
+
+on:
+  schedule:
+    # Cada 15 minutos: vinilo muestra lo que suena AHORA, y con más espacio
+    # entre corridas casi nunca te agarraría escuchando. Solo commitea si la
+    # card cambió.
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/vinilo.yaml"
+
+permissions:
+  contents: write
+
+# Mismo grupo que cards.yaml: los dos publican en la rama output y, en paralelo,
+# el segundo push saldría rechazado.
+concurrency:
+  group: profile-cards
+  cancel-in-progress: false
+
+jobs:
+  card:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: icortesb/vinilo@v1
+        with:
+          client-id: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          client-secret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+          lang: es
+          publish-to: output

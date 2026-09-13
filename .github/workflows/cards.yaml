@@ -2,8 +2,8 @@ name: Profile Cards
 
 on:
   schedule:
-    # Cada dos horas: "recently played" se mantiene fresco sin llenar la rama
-    # output de commits. GitHub cachea las imágenes ~5 min de todos modos.
+    # Cada dos horas alcanza para las stats. La card de Spotify va aparte, en
+    # vinilo.yaml, porque necesita correr mucho más seguido.
     - cron: "0 */2 * * *"
   workflow_dispatch:
   push:
@@ -13,8 +13,8 @@ on:
       - ".github/workflows/cards.yaml"
 
 # Dos corridas simultáneas publicarían sobre la misma rama y una pisaría a la
-# otra. Se encolan.
-# vinilo commitea la card a la rama output.
+# otra. Se encolan — y el grupo es el mismo que usa vinilo.yaml, porque los
+# grupos de concurrencia son de todo el repo, no de cada workflow.
 permissions:
   contents: write
 
@@ -40,17 +40,6 @@ jobs:
           # privados cuenten. Sin él cae al token de la corrida, que solo ve
           # lo público.
           CARDS_TOKEN: ${{ secrets.CARDS_TOKEN || secrets.GITHUB_TOKEN }}
-
-      # La card de Spotify la genera vinilo, que publica a la misma rama
-      # preservando lo que ya está ahí.
-      - name: Card de Spotify
-        uses: icortesb/vinilo@v1
-        with:
-          client-id: ${{ secrets.SPOTIFY_CLIENT_ID }}
-          client-secret: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
-          refresh-token: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
-          lang: es
-          publish-to: output
 
       - name: Publicar en la rama output
         uses: peaceiris/actions-gh-pages@v4
