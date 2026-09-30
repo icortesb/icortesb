@@ -5,7 +5,7 @@
   <g transform="translate(25 62)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"/></svg>
     <text x="27" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" fill="#d8dee9">Total Stars Earned:</text>
-    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">5</text>
+    <text x="220" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="14" font-weight="700" fill="#d8dee9">6</text>
   </g>
   <g transform="translate(25 87)">
     <svg x="0" y="-12" width="16" height="16" viewBox="0 0 16 16" fill="#8fbcbb"><path d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/></svg>
@@ -37,7 +37,7 @@
     <circle r="40" fill="none" stroke="#88c0d0" stroke-width="6"
       stroke-linecap="round" transform="rotate(-90)"
       stroke-dasharray="251.33"
-      stroke-dashoffset="120.54"/>
+      stroke-dashoffset="119.06"/>
     <text y="7" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="24" font-weight="700" fill="#88c0d0">B+</text>
   </g>
 </svg>
