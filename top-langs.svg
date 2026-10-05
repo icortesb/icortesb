@@ -5,17 +5,17 @@
   <g transform="translate(0 62)">
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
-    <rect x="25.00" y="0" width="155.26" height="8" fill="#4F5D95"/>
-    <rect x="180.26" y="0" width="56.04" height="8" fill="#f1e05a"/>
-    <rect x="236.31" y="0" width="25.44" height="8" fill="#663399"/>
-    <rect x="261.75" y="0" width="21.18" height="8" fill="#ff5a03"/>
-    <rect x="282.92" y="0" width="17.88" height="8" fill="#3178c6"/>
-    <rect x="300.80" y="0" width="14.20" height="8" fill="#00ADD8"/>
+    <rect x="25.00" y="0" width="155.31" height="8" fill="#4F5D95"/>
+    <rect x="180.31" y="0" width="55.96" height="8" fill="#f1e05a"/>
+    <rect x="236.27" y="0" width="25.39" height="8" fill="#663399"/>
+    <rect x="261.66" y="0" width="21.19" height="8" fill="#ff5a03"/>
+    <rect x="282.86" y="0" width="17.88" height="8" fill="#3178c6"/>
+    <rect x="300.74" y="0" width="14.26" height="8" fill="#00ADD8"/>
     </g>
   </g>
   <g transform="translate(25.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#4F5D95"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">PHP 53.5%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">PHP 53.6%</text>
   </g>
   <g transform="translate(170.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
