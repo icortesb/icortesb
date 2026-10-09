@@ -5,21 +5,21 @@
   <g transform="translate(0 62)">
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
-    <rect x="25.00" y="0" width="154.64" height="8" fill="#4F5D95"/>
-    <rect x="179.64" y="0" width="56.14" height="8" fill="#f1e05a"/>
-    <rect x="235.78" y="0" width="25.33" height="8" fill="#663399"/>
-    <rect x="261.11" y="0" width="21.22" height="8" fill="#ff5a03"/>
-    <rect x="282.34" y="0" width="18.10" height="8" fill="#3178c6"/>
-    <rect x="300.44" y="0" width="14.56" height="8" fill="#00ADD8"/>
+    <rect x="25.00" y="0" width="154.41" height="8" fill="#4F5D95"/>
+    <rect x="179.41" y="0" width="56.05" height="8" fill="#f1e05a"/>
+    <rect x="235.46" y="0" width="25.29" height="8" fill="#663399"/>
+    <rect x="260.76" y="0" width="21.35" height="8" fill="#ff5a03"/>
+    <rect x="282.11" y="0" width="18.35" height="8" fill="#3178c6"/>
+    <rect x="300.46" y="0" width="14.54" height="8" fill="#00ADD8"/>
     </g>
   </g>
   <g transform="translate(25.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#4F5D95"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">PHP 53.3%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">PHP 53.2%</text>
   </g>
   <g transform="translate(170.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">JavaScript 19.4%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">JavaScript 19.3%</text>
   </g>
   <g transform="translate(25.00 128)">
     <circle cx="5" cy="-4" r="5" fill="#663399"/>
@@ -27,11 +27,11 @@
   </g>
   <g transform="translate(170.00 128)">
     <circle cx="5" cy="-4" r="5" fill="#ff5a03"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">Astro 7.3%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">Astro 7.4%</text>
   </g>
   <g transform="translate(25.00 158)">
     <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">TypeScript 6.2%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">TypeScript 6.3%</text>
   </g>
   <g transform="translate(170.00 158)">
     <circle cx="5" cy="-4" r="5" fill="#00ADD8"/>
