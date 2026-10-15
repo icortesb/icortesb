@@ -5,9 +5,9 @@
   <g transform="translate(0 62)">
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
-    <rect x="25.00" y="0" width="152.61" height="8" fill="#4F5D95"/>
-    <rect x="177.61" y="0" width="55.44" height="8" fill="#f1e05a"/>
-    <rect x="233.05" y="0" width="25.07" height="8" fill="#663399"/>
+    <rect x="25.00" y="0" width="152.62" height="8" fill="#4F5D95"/>
+    <rect x="177.62" y="0" width="55.43" height="8" fill="#f1e05a"/>
+    <rect x="233.05" y="0" width="25.06" height="8" fill="#663399"/>
     <rect x="258.11" y="0" width="21.47" height="8" fill="#ff5a03"/>
     <rect x="279.58" y="0" width="19.25" height="8" fill="#3178c6"/>
     <rect x="298.83" y="0" width="16.17" height="8" fill="#00ADD8"/>
