@@ -5,17 +5,17 @@
   <g transform="translate(0 62)">
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
-    <rect x="25.00" y="0" width="152.49" height="8" fill="#4F5D95"/>
-    <rect x="177.49" y="0" width="55.31" height="8" fill="#f1e05a"/>
-    <rect x="232.80" y="0" width="25.01" height="8" fill="#663399"/>
-    <rect x="257.81" y="0" width="21.75" height="8" fill="#ff5a03"/>
-    <rect x="279.56" y="0" width="19.21" height="8" fill="#3178c6"/>
-    <rect x="298.77" y="0" width="16.23" height="8" fill="#00ADD8"/>
+    <rect x="25.00" y="0" width="152.34" height="8" fill="#4F5D95"/>
+    <rect x="177.34" y="0" width="55.26" height="8" fill="#f1e05a"/>
+    <rect x="232.60" y="0" width="24.99" height="8" fill="#663399"/>
+    <rect x="257.59" y="0" width="21.73" height="8" fill="#ff5a03"/>
+    <rect x="279.32" y="0" width="19.30" height="8" fill="#3178c6"/>
+    <rect x="298.62" y="0" width="16.38" height="8" fill="#00ADD8"/>
     </g>
   </g>
   <g transform="translate(25.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#4F5D95"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">PHP 52.6%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">PHP 52.5%</text>
   </g>
   <g transform="translate(170.00 98)">
     <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
@@ -31,7 +31,7 @@
   </g>
   <g transform="translate(25.00 158)">
     <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
-    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">TypeScript 6.6%</text>
+    <text x="17" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, Sans-Serif" font-size="12.5" fill="#d8dee9">TypeScript 6.7%</text>
   </g>
   <g transform="translate(170.00 158)">
     <circle cx="5" cy="-4" r="5" fill="#00ADD8"/>
