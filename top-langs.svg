@@ -6,11 +6,11 @@
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
     <rect x="25.00" y="0" width="150.17" height="8" fill="#4F5D95"/>
-    <rect x="175.17" y="0" width="54.19" height="8" fill="#f1e05a"/>
-    <rect x="229.36" y="0" width="24.52" height="8" fill="#663399"/>
-    <rect x="253.88" y="0" width="21.59" height="8" fill="#ff5a03"/>
-    <rect x="275.47" y="0" width="20.29" height="8" fill="#3178c6"/>
-    <rect x="295.76" y="0" width="19.24" height="8" fill="#00ADD8"/>
+    <rect x="175.17" y="0" width="54.18" height="8" fill="#f1e05a"/>
+    <rect x="229.35" y="0" width="24.51" height="8" fill="#663399"/>
+    <rect x="253.86" y="0" width="21.59" height="8" fill="#ff5a03"/>
+    <rect x="275.46" y="0" width="20.29" height="8" fill="#3178c6"/>
+    <rect x="295.75" y="0" width="19.25" height="8" fill="#00ADD8"/>
     </g>
   </g>
   <g transform="translate(25.00 98)">
