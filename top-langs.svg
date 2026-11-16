@@ -5,12 +5,12 @@
   <g transform="translate(0 62)">
     <clipPath id="barclip"><rect x="25" y="0" width="290" height="8" rx="4"/></clipPath>
     <g clip-path="url(#barclip)">
-    <rect x="25.00" y="0" width="149.45" height="8" fill="#4F5D95"/>
-    <rect x="174.45" y="0" width="52.67" height="8" fill="#f1e05a"/>
-    <rect x="227.12" y="0" width="23.82" height="8" fill="#663399"/>
-    <rect x="250.94" y="0" width="21.55" height="8" fill="#ff5a03"/>
-    <rect x="272.49" y="0" width="21.30" height="8" fill="#00ADD8"/>
-    <rect x="293.78" y="0" width="21.22" height="8" fill="#3178c6"/>
+    <rect x="25.00" y="0" width="149.49" height="8" fill="#4F5D95"/>
+    <rect x="174.49" y="0" width="52.75" height="8" fill="#f1e05a"/>
+    <rect x="227.24" y="0" width="23.78" height="8" fill="#663399"/>
+    <rect x="251.02" y="0" width="21.59" height="8" fill="#ff5a03"/>
+    <rect x="272.61" y="0" width="21.21" height="8" fill="#00ADD8"/>
+    <rect x="293.82" y="0" width="21.18" height="8" fill="#3178c6"/>
     </g>
   </g>
   <g transform="translate(25.00 98)">
